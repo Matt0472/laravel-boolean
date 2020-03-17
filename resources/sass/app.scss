@@ -55,6 +55,45 @@
 
 .wrapper {
   width: 80%;
-  height: 100vh;
   margin: 120px auto 0 auto;
+}
+
+.nav-footer {
+  background-color: #1B3C59;
+  .container-fluid-top {
+    height: 100%;
+    width: 80%;
+    margin: auto;
+    padding-top: 65px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 3px solid #fff;
+    .nav-footer-left {
+      display: flex;
+      flex-direction: column;
+      img {
+        width: 200px;
+      }
+      small {
+        font-size: 15px;
+        margin-top: 5px;
+        color: #fff;
+      }
+    }
+    .nav-footer-right {
+      ul {
+        list-style: none;
+        text-align: right;
+        li {
+          padding: 5px 0;
+          a {
+            font-size: 20px;
+            color: #fff;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
 }
