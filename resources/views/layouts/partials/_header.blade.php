@@ -13,22 +13,28 @@
 </head>
 <body>
   <div class="nav-container">
-    <ul>
-      <li>
-      <a href="{{route('static_page.home')}}">Home</a>
-      </li>
-      <li>
-        <a href="">Corso</a>
-      </li>
-      <li>
-        <a href="">Dopo il Corso</a>
-      </li>
-      <li>
-        <a href="">Lezione Gratuita</a>
-      </li>
-      <li>
-        <a href="">Candidati ora</a>
-      </li>
-    </ul>
+    <div class="nav-left">
+      <img src="https://www.boolean.careers/images/common/logo.png" alt="">
+    </div>
+    <div class="nav-right">
+      <ul>
+        <li>
+        <a href="{{route('static_page.home')}}">Home</a>
+        </li>
+        <li>
+          <a href="">Corso</a>
+        </li>
+        <li>
+          <a href="">Dopo il Corso</a>
+        </li>
+        <li>
+          <a href="">Lezione Gratuita</a>
+        </li>
+        <li>
+          <a class="candidati-btn" href="">Candidati ora</a>
+        </li>
+      </ul>
+    </div>
+    
   </div>
     <div class="wrapper">

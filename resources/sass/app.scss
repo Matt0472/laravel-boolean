@@ -1,1 +1,60 @@
-//
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+ body {
+   font-family: 'Rubik', sans-serif;
+   font-size: 14px;
+   background-color: #E8EBF1;
+ }
+.nav-container {
+  display: flex;
+  width: 100%;
+  height: 90px;
+  padding: 15px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  .nav-left {
+    width: 30%;
+    img {
+        height: 100%;
+    }
+  }
+  .nav-right {
+    width: 70%;
+    ul {
+      width: 100%;
+      height: 100%;
+      list-style: none;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      li {
+        margin-left: 55px;
+        a {
+          text-decoration: none;
+          font-size: 17px;
+          &.candidati-btn {
+            border: 1px solid #61ce4e;
+            background-color: #61ce4e;
+            border-radius: 10px;
+            padding: 10px 25px;
+            color: #fff;
+          }
+          &.candidati-btn:hover{
+             background-color: #73d462;
+          }
+        }
+      }
+    }
+  }
+}
+
+.wrapper {
+  width: 80%;
+  height: 100vh;
+  margin: 120px auto 0 auto;
+}
