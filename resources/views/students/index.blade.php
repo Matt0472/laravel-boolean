@@ -1,5 +1,12 @@
 @extends('layouts.layout')
 @section('main-content')
+<div class="filter">
+  <select name="filter" id="filter">
+    @foreach ($genders as $gender)
+      <option value="{{$gender}}">@if($gender == 'm') {{$gender = 'Maschio'}} @elseif($gender == 'f') {{$gender = 'Femmina'}} @else {{$gender = 'Tutti'}} @endif</option>
+    @endforeach
+  </select>
+</div>
 <section class="all-students">
   @foreach ($students as $student)
     <div class="student">
