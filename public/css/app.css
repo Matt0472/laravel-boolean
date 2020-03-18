@@ -8,6 +8,7 @@ body {
   font-family: "Rubik", sans-serif;
   font-size: 14px;
   background-color: #E8EBF1;
+  color: #1B3C59;
 }
 
 .nav-container {
@@ -62,6 +63,56 @@ body {
 
 .nav-container .nav-right ul li a.candidati-btn:hover {
   background-color: #73d462;
+}
+
+.jumbotron {
+  display: flex;
+  background-color: #fff;
+  padding: 60px;
+}
+
+.jumbotron .jumbo-left {
+  width: 50%;
+}
+
+.jumbotron .jumbo-left h1 {
+  font-size: 60px;
+  font-weight: lighter;
+  margin-bottom: 20px;
+}
+
+.jumbotron .jumbo-left .jumbo-span {
+  display: inline-block;
+  font-size: 25px;
+  line-height: 30px;
+  margin-bottom: 20px;
+}
+
+.jumbotron .jumbo-left ul {
+  padding-left: 20px;
+}
+
+.jumbotron .jumbo-left ul li {
+  font-weight: lighter;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.jumbotron .jumbo-left ul li .span-list {
+  font-weight: bold;
+}
+
+.jumbotron .jumbo-right {
+  width: 50%;
+  position: relative;
+}
+
+.jumbotron .jumbo-right img {
+  max-width: 90%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 50%;
 }
 
 .wrapper {
