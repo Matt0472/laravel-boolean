@@ -5,9 +5,11 @@
     <div class="student">
       <div class="info">
         <img src="{{$student['img']}}" alt="{{$student['name']}}">
-          <h3>
-            {{$student['name']}}({{$student['eta']}})
-          </h3>
+          <a href="{{route('student.show', ['slug' => $student['slug']])}}">
+            <h3>
+              {{$student['name']}}({{$student['eta']}})
+            </h3>
+          </a>
           <span>
             Assunt{{($student['genere'] == 'm') ? 'o' : 'a'}} da {{$student['azienda']}} 
             come {{$student['ruolo']}}
