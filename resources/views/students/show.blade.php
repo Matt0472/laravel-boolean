@@ -10,7 +10,7 @@
             </h3>
           </a>
           <span>
-            Assunt{{($student['genere'] == 'm') ? 'o' : 'a'}} da {{$student['azienda']}} 
+            Assunt{{($student['gender'] == 'm') ? 'o' : 'a'}} da {{$student['azienda']}} 
             come {{$student['ruolo']}}
           </span>
       </div>
