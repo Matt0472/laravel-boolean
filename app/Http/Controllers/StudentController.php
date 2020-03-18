@@ -21,10 +21,11 @@ class StudentController extends Controller
 
     public function show($slug)
     {
+        $students = $this->students;
        $find = false;
        $thisStudent = [];
 
-       foreach ($this->students as $student) {
+       foreach ($students as $student) {
         if ($student['slug'] == $slug) {
           $find = true;
           $thisStudent = $student;
