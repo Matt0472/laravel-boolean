@@ -15,28 +15,27 @@ class StudentController extends Controller
     public function index()
     {
         $students = $this->students;
-        
+
         return view('students.index', compact('students'));
     }
 
     public function show($slug)
     {
         $students = $this->students;
-       $find = false;
-       $thisStudent = [];
+        $find = false;
+        $thisStudent = [];
 
-       foreach ($students as $student) {
-        if ($student['slug'] == $slug) {
-          $find = true;
-          $thisStudent = $student;
+        foreach ($students as $student) {
+            if ($student['slug'] == $slug) {
+                $find = true;
+                $thisStudent = $student;
+            }
         }
-       }
 
-       if ($find) {
-           return view('students.show', ['student' => $thisStudent]);
-       }
-       else {
-        abort('404');
-       }
+        if ($find) {
+            return view('students.show', ['student' => $thisStudent]);
+        } else {
+            abort('404');
+        }
     }
 }
