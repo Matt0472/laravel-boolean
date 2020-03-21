@@ -41,6 +41,28 @@
             </div>
           </div>
         </nav>
+
+        {{-- nostro script --}}
         <script src="{{asset('js/app.js')}}"></script>
+
+        {{-- handlebars --}}
+        <script id="entry-template" type="text/x-handlebars-template">
+          <div class="student">
+            <div class="info">
+              <img src="@{{img}}" alt="@{{name}}">
+                  <h3>
+                    @{{name}}(@{{eta}})
+                  </h3>
+                <span>
+                  Assunt@{{gender}} da @{{azienda}} 
+                  come @{{ruolo}}
+                </span>
+            </div>
+            <p>@{{descrizione}}</p>
+            <a href="" class="linkedin-icon">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </div>
+      </script>
   </body>
 </html>
