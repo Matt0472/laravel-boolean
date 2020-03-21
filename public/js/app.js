@@ -29896,7 +29896,26 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 var $ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
 
 $(document).ready(function () {
-  alert('Bubusettete');
+  $('#filter').change(function () {
+    console.log($(this).val());
+    $.ajax({
+      'url': window.location.protocol + '//' + window.location.host + '/api/students/genders',
+      'data': {
+        'gender': $(this).val()
+      },
+      'method': 'POST',
+      success: function success(data) {
+        if (data.response.length > 0) {
+          console.log(data.response);
+        } else {
+          console.log('no students');
+        }
+      },
+      error: function error() {
+        console.log('error');
+      }
+    });
+  });
 });
 
 /***/ }),

@@ -7,14 +7,13 @@ use Illuminate\Http\Request;
 
 class StudentController extends Controller
 {
+        
     public function gender(Request $request)
     {
-
+      
         $data = $request->all();
-
         $genders = config('students.genders');
-        $students = config('students.students');
-
+        $students = config('students.allStudents');
         $result = [
             'error' => '',
             'response' => []
@@ -37,5 +36,7 @@ class StudentController extends Controller
             $result['error'] = 'Gender non esistente';
             return response()->json($result);
         }
+        
+        
     }
 }
