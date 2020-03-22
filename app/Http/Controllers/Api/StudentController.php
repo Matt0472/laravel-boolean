@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class StudentController extends Controller
 {
-        
+
     public function gender(Request $request)
     {
       
@@ -39,4 +39,55 @@ class StudentController extends Controller
         
         
     }
+
+
+    public function filterAll(Request $request)
+    {
+        $students = config('students.allStudents');
+
+
+        $typeRequest = [
+            'eta',
+            'name',
+            'azienda'
+        ];
+        $data = $request->all();
+
+        foreach ($data as $key => $value) {
+            if (!in_array($key, $typeRequest)) {
+                unset($data[$key]);
+            }
+        }
+        
+        foreach ($data as $key => $value) {
+            if (array_key_first($data) == $key) {
+                $studentsFiltered = $this->filterFor($key, $value, $students);
+            }
+            
+            else {
+                $studentsFiltered = $this->filterFor($key, $value, $studentsFiltered);
+            }
+        }
+
+
+        return response()->json($studentsFiltered);
+    }
+
+    private function filterFor($type, $value, $array)
+    {
+
+        $filtered = [];
+        foreach ($array as $element) {
+            if ($element[$type] == $value) {
+                $filtered[] = $element;
+            }
+        }
+        return $filtered;
+    }
 }
+
+
+    
+    
+
+   

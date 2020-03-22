@@ -45,7 +45,50 @@ $(document).ready(function() {
     });
   });
 
-});
+  $('#send-btn').click(function () {
+    var name = $('#student-name').val();
+    var  company = $('#company-name').val();
+    var age = $('#student-age').val();
+
+    var data = {
+        'name': name,
+        'azienda': company,
+        'eta': age
+    };
+
+    for (var key in data) {
+        if (data[key].length == 0) {
+            delete data[key];
+        }
+    }
+
+    $.ajax({
+    'url': 'http://127.0.0.1:8000/api/students/filter',
+    'method': 'POST',
+    'data': data,
+    'success': function (data) {
+        reset();
+
+        var source = $("#entry-template").html();
+        var template = Handlebars.compile(source);
+
+        for (var i = 0; i < data.length; i++) {
+          var element = data[i];
+          
+          var html = template(element);
+          $('.all-students').append(html);
+        }
+
+    },
+    'error': function () {
+        console.log('error');
+
+    }
+    });
+
+    });
+  });
+
 
 
 // ------------------------------------FUNCTIONS-------------------------------------

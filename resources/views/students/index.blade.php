@@ -7,6 +7,21 @@
     @endforeach
   </select>
 </div>
+<form>
+  <div class="form-group">
+    <label for="student-name">Nome Studente</label>
+    <input type="name" class="form-control" id="student-name" placeholder="Inserisci nome studente">
+  </div>
+  <div class="form-group">
+    <label for="company-name">Nome Azienda</label>
+    <input type="company-name" class="form-control" id="company-name" placeholder="Inserisci nome azienda">
+  </div>
+  <div class="form-group">
+    <label for="student-age">Età Studente</label>
+    <input type="student-age" class="form-control" id="student-age" placeholder="Inserisci l'eta dello studente">
+  </div>
+  <button type="button" id="send-btn" class="btn btn-primary">Invia</button>
+</form>
 <section class="all-students">
   @foreach ($students as $student)
     <div class="student">
